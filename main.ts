@@ -5,6 +5,13 @@
  * @fileoverview NBA Trivia Game - Base Version (20 Questions)
 */
 
+//Intro
+console.log("NBA TRIVIA GAME");
+console.log("----------------");
+console.log("Answer each question by typing A, B, C, or D.");
+console.log("The game will tell you if your answer is correct.");
+console.log("Good luck!");
+
 // Questions
 const questions: string[] = [
   "How many teams are in the NBA?",
@@ -20,14 +27,14 @@ const questions: string[] = [
   "How long is a standard NBA game?",
 
   "Which team has won the most NBA championships?",
-  "Who became the NBA’s all-time leading scorer in 2023?",
-  "Which team went 73–9 during the 2015–2016 season?",
+  "Who became the NBAs all-time leading scorer in 2023?",
+  "Which team went 73-9 during the 2015-2016 season?",
   "Which player scored 100 points in a single NBA game?",
   "Which NBA team won its first championship in 2019?",
 
   "Who was the first player to be unanimously voted NBA MVP?",
   "Which player holds the NBA record for most career assists?",
-  "Which team did Shaquille O’Neal win his first NBA championship with?",
+  "Which team did Shaquille ONeal win his first NBA championship with?",
   "What year was the NBA founded?",
   "Which player is nicknamed “The Greek Freak”?"
 ];
@@ -43,7 +50,7 @@ const choices: string[][] = [
   ["A. Kobe Bryant", "B. Allen Iverson", "C. Tracy McGrady", "D. Dwyane Wade"],
   ["A. Miami Heat", "B. Toronto Raptors", "C. Golden State Warriors", "D. Los Angeles Lakers"],
   ["A. Shooting Guard", "B. Small Forward", "C. Power Forward", "D. Point Guard"],
-  ["A. Shaquille O’Neal", "B. Hakeem Olajuwon", "C. Kareem Abdul-Jabbar", "D. Tim Duncan"],
+  ["A. Shaquille ONeal", "B. Hakeem Olajuwon", "C. Kareem Abdul-Jabbar", "D. Tim Duncan"],
   ["A. 40 minutes", "B. 48 minutes", "C. 50 minutes", "D. 60 minutes"],
 
   ["A. Los Angeles Lakers", "B. Chicago Bulls", "C. Golden State Warriors", "D. Boston Celtics"],
@@ -52,7 +59,7 @@ const choices: string[][] = [
   ["A. Michael Jordan", "B. Kobe Bryant", "C. LeBron James", "D. Wilt Chamberlain"],
   ["A. Golden State Warriors", "B. Toronto Raptors", "C. Milwaukee Bucks", "D. Brooklyn Nets"],
 
-  ["A. LeBron James", "B. Shaquille O’Neal", "C. Michael Jordan", "D. Stephen Curry"],
+  ["A. LeBron James", "B. Shaquille ONeal", "C. Michael Jordan", "D. Stephen Curry"],
   ["A. Magic Johnson", "B. John Stockton", "C. Chris Paul", "D. Oscar Robertson"],
   ["A. Orlando Magic", "B. Miami Heat", "C. Los Angeles Lakers", "D. Phoenix Suns"],
   ["A. 1940", "B. 1943", "C. 1946", "D. 1950"],
