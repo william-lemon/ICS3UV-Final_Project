@@ -10,6 +10,7 @@ console.log("NBA TRIVIA GAME");
 console.log("----------------");
 console.log("Answer each question by typing A, B, C, or D.");
 console.log("The game will tell you if your answer is correct.");
+console.log("Question values: 1-5(1), 6-10(3), 11-15(5), 16-20(7).");
 console.log("Good luck!");
 
 // Questions
@@ -74,6 +75,9 @@ const correctAnswers: string[] = [
   "D", "B", "C", "C", "C"
 ];
 
+// Score variable
+let score = 0;
+
 // Loop through questions
 let questionIndex = 0;
 
@@ -90,11 +94,25 @@ while (questionIndex < questions.length) {
 
   if (userAnswer && userAnswer.toUpperCase() === correctAnswers[questionIndex]) {
     console.log("Correct!");
-  } else {
-    console.log("Wrong.");
-  }
 
-  questionIndex = questionIndex + 1;
+// Add points based on question number
+if (questionIndex < 5) {
+  score = score + 1;
+} else if (questionIndex < 10) {
+  score = score + 3;
+} else if (questionIndex < 15) {
+  score = score + 5;
+} else {
+  score = score + 7;
+}
+
+  } else {
+  console.log("Wrong.");
+}
+
+console.log("Current Score: " + score);
+questionIndex = questionIndex + 1;
 }
 
 console.log("\nQuiz complete!");
+console.log("Final Score: " + score);
