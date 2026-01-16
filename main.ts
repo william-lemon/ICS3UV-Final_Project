@@ -81,8 +81,30 @@ let score = 0;
 // Loop through questions
 let questionIndex = 0;
 
+// Hint tracking
+let hintUsedThisQuestion = false;
+let halfPoints = false;
+
+// Hint counter
+let hintCount = 0;
+
+// One wrong answer to avoid for each question
+const hintRemovals: string[] = [
+  "A", "C", "D", "A", "B",
+  "A", "B", "A", "D", "C",
+  "B", "A", "B", "A", "C",
+  "B", "A", "B", "A", "D"
+];
+
+
 while (questionIndex < questions.length) {
   console.log("\nQuestion " + (questionIndex + 1) + ": " + questions[questionIndex]);
+  let hintChoice = prompt("Do you want a hint? (yes or no):");
+
+  if (hintChoice && hintChoice.toLowerCase() === "yes") {
+    console.log("Hint: Do NOT choose answer " + hintRemovals[questionIndex]);
+    hintCount = hintCount + 1;
+  }
 
   let choiceIndex = 0;
   while (choiceIndex < choices[questionIndex].length) {
@@ -116,3 +138,4 @@ questionIndex = questionIndex + 1;
 
 console.log("\nQuiz complete!");
 console.log("Final Score: " + score);
+console.log("Hints used: " + hintCount);
